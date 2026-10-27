@@ -1,0 +1,15 @@
+# Original source files (the site uses the optimised copies in assets/)
+cover photo.jpeg
+profile pic.jpeg
+Priyam_Resume.pdf
+
+# OS / editor clutter
+.DS_Store
+Thumbs.db
+desktop.ini
+.vscode/
+.idea/
+
+# Local environment files (never commit secrets)
+.env
+.env.*

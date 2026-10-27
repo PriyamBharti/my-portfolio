@@ -1,0 +1,353 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Priyam Bharti — Software &amp; Web Developer</title>
+  <meta name="description" content="Portfolio of Priyam Bharti, B.Tech Computer Science and Engineering student at SRM Institute of Science and Technology — software, web and iOS development.">
+  <meta name="color-scheme" content="light dark">
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='16' fill='%235b2a86'/%3E%3Ctext x='50%25' y='54%25' text-anchor='middle' dominant-baseline='middle' font-family='Georgia,serif' font-size='30' fill='%23fff'%3EPB%3C/text%3E%3C/svg%3E">
+  <link rel="preload" href="assets/fonts/inter-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="preload" href="assets/fonts/fraunces-var.woff2" as="font" type="font/woff2" crossorigin>
+  <script>
+    /* Apply saved or system theme before first paint to avoid a flash */
+    (function () {
+      var t = null;
+      try { t = localStorage.getItem('theme'); } catch (e) {}
+      if (t !== 'light' && t !== 'dark') {
+        t = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+      }
+      document.documentElement.setAttribute('data-theme', t);
+      document.documentElement.classList.add('js');
+    })();
+  </script>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <!-- SVG icon sprite -->
+  <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+    <symbol id="i-github" viewBox="0 0 24 24"><path fill="currentColor" d="M12 .5a11.5 11.5 0 0 0-3.64 22.41c.58.1.79-.25.79-.56v-2c-3.2.7-3.88-1.37-3.88-1.37-.52-1.33-1.28-1.69-1.28-1.69-1.05-.71.08-.7.08-.7 1.16.08 1.77 1.19 1.77 1.19 1.03 1.77 2.7 1.26 3.36.96.1-.75.4-1.26.73-1.55-2.55-.29-5.24-1.28-5.24-5.68 0-1.26.45-2.28 1.19-3.09-.12-.29-.52-1.46.11-3.05 0 0 .97-.31 3.17 1.18a11 11 0 0 1 5.77 0c2.2-1.49 3.17-1.18 3.17-1.18.63 1.59.23 2.76.11 3.05.74.81 1.19 1.83 1.19 3.09 0 4.41-2.69 5.38-5.26 5.67.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.8.56A11.5 11.5 0 0 0 12 .5Z"/></symbol>
+    <symbol id="i-linkedin" viewBox="0 0 24 24"><path fill="currentColor" d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.34V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28ZM5.34 7.43a2.06 2.06 0 1 1 0-4.13 2.06 2.06 0 0 1 0 4.13ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/></symbol>
+    <symbol id="i-mail" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" d="M4 5h16a1 1 0 0 1 1 1v12a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1V6a1 1 0 0 1 1-1Zm-.5 1.5 8.5 6.5 8.5-6.5"/></symbol>
+    <symbol id="i-download" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M12 4v11m0 0-4.5-4.5M12 15l4.5-4.5M5 19.5h14"/></symbol>
+    <symbol id="i-sun" viewBox="0 0 24 24"><g fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"><circle cx="12" cy="12" r="4.2"/><path d="M12 2.5v2.2M12 19.3v2.2M2.5 12h2.2M19.3 12h2.2M5.3 5.3l1.6 1.6M17.1 17.1l1.6 1.6M5.3 18.7l1.6-1.6M17.1 6.9l1.6-1.6"/></g></symbol>
+    <symbol id="i-moon" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" d="M20.5 14.2A8.5 8.5 0 0 1 9.8 3.5a8.5 8.5 0 1 0 10.7 10.7Z"/></symbol>
+    <symbol id="i-arrow" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" d="M7 17 17 7m0 0H8.5M17 7v8.5"/></symbol>
+    <symbol id="i-up" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 19V5m0 0-6 6m6-6 6 6"/></symbol>
+  </svg>
+
+  <header class="site-header" id="top">
+    <nav class="nav container" aria-label="Primary">
+      <a class="brand" href="#top" aria-label="Priyam Bharti, back to top">
+        <span class="brand-mark" aria-hidden="true">PB</span>
+        <span class="brand-name">Priyam Bharti</span>
+      </a>
+
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+
+      <div class="nav-actions">
+        <button class="icon-btn theme-toggle" id="theme-toggle" type="button" aria-label="Switch to dark theme">
+          <svg class="icon icon-moon" aria-hidden="true"><use href="#i-moon"/></svg>
+          <svg class="icon icon-sun" aria-hidden="true"><use href="#i-sun"/></svg>
+        </button>
+        <button class="icon-btn menu-toggle" id="menu-toggle" type="button" aria-label="Open menu" aria-expanded="false" aria-controls="nav-links">
+          <span class="menu-bars" aria-hidden="true"><span></span><span></span></span>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- COVER -->
+    <div class="cover">
+      <img src="assets/img/cover.jpg" width="836" height="1280" alt="Priyam Bharti speaking at a podium during an event at SRM Institute of Science and Technology" fetchpriority="high">
+    </div>
+
+    <!-- INTRO -->
+    <section class="intro container" aria-labelledby="hero-title">
+      <div class="hero-avatar reveal">
+        <img src="assets/img/profile.jpg" width="720" height="803" alt="Portrait of Priyam Bharti in a grey blazer, smiling outdoors">
+      </div>
+
+      <div class="hero-text">
+        <p class="eyebrow reveal">Computer Science &amp; Engineering · SRM IST, Chennai</p>
+        <h1 class="hero-title reveal" id="hero-title">
+          Priyam Bharti
+          <span class="hero-role">Software &amp; Web Developer</span>
+        </h1>
+        <p class="hero-lede reveal">
+          A detail-oriented CSE student who designs and develops user-friendly, scalable and efficient applications -
+          from secure REST APIs and web apps to AI-driven projects, while honing iOS development with Swift.
+        </p>
+
+        <div class="hero-actions reveal">
+          <div class="hero-cta">
+            <a class="btn btn-primary" href="assets/Priyam_Bharti_Resume.pdf" download="Priyam_Bharti_Resume.pdf">
+              <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+              Download Resume
+            </a>
+            <a class="btn btn-ghost" href="#contact">Get in touch</a>
+          </div>
+
+          <ul class="social" aria-label="Profiles">
+            <li><a class="icon-btn" href="https://github.com/PriyamBharti" target="_blank" rel="noopener noreferrer" aria-label="GitHub (opens in a new tab)"><svg class="icon" aria-hidden="true"><use href="#i-github"/></svg></a></li>
+            <li><a class="icon-btn" href="https://www.linkedin.com/in/priyam-bharti-229449290" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn (opens in a new tab)"><svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg></a></li>
+            <li><a class="icon-btn" href="mailto:priyambharti06@gmail.com" aria-label="Email priyambharti06@gmail.com"><svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg></a></li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK FACTS -->
+    <section class="container facts" aria-label="Highlights">
+      <dl class="facts-grid">
+        <div class="fact reveal"><dt>CGPA</dt><dd>8.83</dd></div>
+        <div class="fact reveal"><dt>Internship</dt><dd>Bluestock Fintech</dd></div>
+        <div class="fact reveal"><dt>Projects</dt><dd>5</dd></div>
+        <div class="fact reveal"><dt>Certifications</dt><dd>6</dd></div>
+      </dl>
+    </section>
+
+    <!-- ABOUT & LEADERSHIP -->
+    <section class="section container" id="about" aria-labelledby="about-title">
+      <div class="about-grid">
+        <div class="about-body">
+          <p class="section-kicker reveal">01 — About</p>
+          <h2 class="section-title reveal" id="about-title">Building thoughtful software, <em>and the teams around it.</em></h2>
+          <p class="reveal">
+            I'm a highly motivated Computer Science and Engineering student with a passion for crafting innovative mobile
+            experiences. I'm currently honing my skills in iOS app development, with a strong foundation in programming
+            languages such as Swift, and I'm proficient in designing and developing user-friendly, scalable and efficient
+            applications.
+          </p>
+          <p class="reveal">
+            I'm eager to leverage my skills and knowledge to contribute to the development of cutting-edge mobile
+            applications and drive business growth in the app development industry.
+          </p>
+        </div>
+
+        <div class="about-side">
+          <h3 class="sub-title reveal">Leadership &amp; activities</h3>
+          <ul class="role-list">
+            <li class="reveal"><span class="role-tag">Organiser</span><span>Aaruush - An International-level Techno-management fest</span></li>
+            <li class="reveal"><span class="role-tag">Lead</span><span>SRM Quantum Computing Club</span></li>
+            <li class="reveal"><span class="role-tag">Member</span><span>IEI</span></li>
+          </ul>
+
+          <p class="languages reveal"><strong>Languages:</strong> English, Hindi, Spanish (Basic)</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- EXPERIENCE -->
+    <section class="section container" id="experience" aria-labelledby="exp-title">
+      <header class="section-head">
+        <p class="section-kicker reveal">02 — Experience</p>
+        <h2 class="section-title reveal" id="exp-title">Work experience</h2>
+      </header>
+
+      <ol class="timeline">
+        <li class="timeline-item reveal">
+          <article class="card exp-card">
+            <div class="exp-head">
+              <div>
+                <h3 class="card-title">Software Developer Intern</h3>
+                <p class="exp-org">Bluestock Fintech</p>
+              </div>
+              <p class="exp-date"><time datetime="2025-04-01">1 Apr</time> – <time datetime="2025-05-31">31 May 2025</time></p>
+            </div>
+            <div class="exp-cols">
+              <div>
+                <h4 class="exp-label">What I did</h4>
+                <p>Developed secure REST APIs and an IPO web application; designed databases; documented and tested APIs; and collaborated with teams to deploy successfully.</p>
+              </div>
+              <div>
+                <h4 class="exp-label">What I learned</h4>
+                <p>Gained experience in full-cycle development, API security, CI/CD, cloud deployment, Git, clean coding, and teamwork.</p>
+              </div>
+            </div>
+            <ul class="tags" aria-label="Focus areas">
+              <li>REST APIs</li><li>API Security</li><li>Databases</li><li>CI/CD</li><li>Cloud Deployment</li><li>Git</li>
+            </ul>
+          </article>
+        </li>
+      </ol>
+    </section>
+
+    <!-- PROJECTS -->
+    <section class="section container" id="projects" aria-labelledby="proj-title">
+      <header class="section-head">
+        <p class="section-kicker reveal">03 — Projects</p>
+        <h2 class="section-title reveal" id="proj-title">Selected projects</h2>
+      </header>
+
+      <div class="project-grid">
+        <article class="card project-card project-feature reveal">
+          <p class="project-type">Web · Agency website</p>
+          <h3 class="card-title">JAZBAAT — Advertising Agency Website</h3>
+          <p>Developed a multi-page website showcasing the agency's brand story, services, creative portfolio, gallery, and contact information.</p>
+          <ul class="tags" aria-label="Tech stack">
+            <li>Next.js</li><li>React</li><li>TypeScript</li><li>Tailwind CSS</li><li>Framer Motion</li>
+          </ul>
+        </article>
+
+        <article class="card project-card reveal">
+          <p class="project-type">AI · Agriculture</p>
+          <h3 class="card-title">GreenScope: AI Framework for Crop Health &amp; Yield Estimation</h3>
+          <ul class="tags" aria-label="Tech stack">
+            <li>Python</li><li>Google Earth Engine</li><li>Sentinel-2</li><li>NASA POWER API</li><li>Scikit-learn</li><li>XGBoost</li><li>Pandas</li><li>NumPy</li><li>Machine Learning</li><li>Remote Sensing</li>
+          </ul>
+        </article>
+
+        <article class="card project-card reveal">
+          <p class="project-type">AI · Finance</p>
+          <h3 class="card-title">INSIGHT WEALTH: AI-powered Financial Advisor for Smart Investment</h3>
+          <ul class="tags" aria-label="Tech stack">
+            <li>Python</li><li>Flask</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+        </article>
+
+        <article class="card project-card reveal">
+          <p class="project-type">AI · News</p>
+          <h3 class="card-title">INTERNATIONAL INTRIGUE: AI-Powered News Summariser</h3>
+          <ul class="tags" aria-label="Tech stack">
+            <li>Node.js</li><li>MySQL</li><li>Schema</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+        </article>
+
+        <article class="card project-card reveal">
+          <p class="project-type">Web · Healthcare</p>
+          <h3 class="card-title">Hospital Management System</h3>
+          <ul class="tags" aria-label="Tech stack">
+            <li>Java</li><li>HTML</li><li>CSS</li><li>JavaScript</li>
+          </ul>
+        </article>
+      </div>
+
+      <p class="more-link reveal">
+        <a href="https://github.com/PriyamBharti" target="_blank" rel="noopener noreferrer">
+          See more on GitHub <svg class="icon" aria-hidden="true"><use href="#i-arrow"/></svg>
+        </a>
+      </p>
+    </section>
+
+    <!-- SKILLS -->
+    <section class="section container" id="skills" aria-labelledby="skills-title">
+      <header class="section-head">
+        <p class="section-kicker reveal">04 — Skills</p>
+        <h2 class="section-title reveal" id="skills-title">Skills &amp; tools</h2>
+      </header>
+
+      <div class="skills-grid">
+        <div class="card skill-group reveal">
+          <h3 class="skill-title">Programming languages</h3>
+          <ul class="chips"><li>Python</li><li>C</li><li>C++</li><li>Java</li><li>Swift</li><li>JavaScript</li></ul>
+        </div>
+        <div class="card skill-group reveal">
+          <h3 class="skill-title">Frameworks, data &amp; ML</h3>
+          <ul class="chips"><li>Flask</li><li>MySQL</li><li>Scikit-learn</li><li>XGBoost</li><li>Pandas</li><li>NumPy</li></ul>
+        </div>
+        <div class="card skill-group reveal">
+          <h3 class="skill-title">Design &amp; productivity</h3>
+          <ul class="chips"><li>Figma</li><li>Canva</li><li>AutoCAD</li><li>MS Excel</li></ul>
+        </div>
+        <div class="card skill-group reveal">
+          <h3 class="skill-title">Domains</h3>
+          <ul class="chips"><li>Web Development</li><li>App Development</li><li>Software Development</li><li>iOS Development <span class="chip-note">(learning)</span></li></ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- EDUCATION & CERTIFICATIONS -->
+    <section class="section container" id="education" aria-labelledby="edu-title">
+      <header class="section-head">
+        <p class="section-kicker reveal">05 — Education</p>
+        <h2 class="section-title reveal" id="edu-title">Education &amp; certifications</h2>
+      </header>
+
+      <div class="edu-grid">
+        <div class="edu-list">
+          <article class="card edu-card reveal">
+            <p class="edu-date"><time datetime="2023-08">Aug 2023</time> – <time datetime="2027-08">Aug 2027</time></p>
+            <h3 class="card-title">B.Tech in Computer Science and Engineering</h3>
+            <p class="edu-org">SRM Institute of Science and Technology, Chennai</p>
+            <p class="edu-score"><span>CGPA</span> 8.83</p>
+          </article>
+
+          <article class="card edu-card reveal">
+            <h3 class="card-title">DAV Public School</h3>
+            <p class="edu-org">Senior &amp; secondary schooling</p>
+            <div class="edu-scores">
+              <p class="edu-score"><span>Class 12</span> 79.6%</p>
+              <p class="edu-score"><span>Class 10</span> 88.8%</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="card cert-card reveal">
+          <h3 class="sub-title">Certifications</h3>
+          <ul class="cert-list">
+            <li>AWS AI Practitioner</li>
+            <li>Python 101 for Data Science</li>
+            <li>Python Data Dynamo — Jupyter to GPT</li>
+            <li>NPTEL - Java</li>
+            <li>Introduction to DBMS</li>
+            <li>Rank Certificate - TCS CodeVita</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="section container" id="contact" aria-labelledby="contact-title">
+      <div class="contact-panel reveal">
+        <p class="section-kicker">06 — Contact</p>
+        <h2 class="section-title" id="contact-title">Let's build something <em>together.</em></h2>
+        <p class="contact-lede">Recruiting for an internship, or need a website built? I'd love to hear from you.</p>
+
+        <div class="contact-links">
+          <a class="contact-link" href="mailto:priyambharti06@gmail.com">
+            <svg class="icon" aria-hidden="true"><use href="#i-mail"/></svg>
+            <span><small>Email</small>priyambharti06@gmail.com</span>
+          </a>
+          <a class="contact-link" href="https://www.linkedin.com/in/priyam-bharti-229449290" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-linkedin"/></svg>
+            <span><small>LinkedIn</small>priyam-bharti-229449290</span>
+          </a>
+          <a class="contact-link" href="https://github.com/PriyamBharti" target="_blank" rel="noopener noreferrer">
+            <svg class="icon" aria-hidden="true"><use href="#i-github"/></svg>
+            <span><small>GitHub</small>PriyamBharti</span>
+          </a>
+        </div>
+
+        <div class="contact-actions">
+          <a class="btn btn-light" href="assets/Priyam_Bharti_Resume.pdf" download="Priyam_Bharti_Resume.pdf">
+            <svg class="icon" aria-hidden="true"><use href="#i-download"/></svg>
+            Download Resume
+          </a>
+          <button class="btn btn-outline-light" type="button" id="copy-email" data-email="priyambharti06@gmail.com">Copy email</button>
+          <span class="copy-status" id="copy-status" role="status" aria-live="polite"></span>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Priyam Bharti</p>
+      <a class="to-top" href="#top">Back to top <svg class="icon" aria-hidden="true"><use href="#i-up"/></svg></a>
+    </div>
+  </footer>
+
+  <script src="js/main.js" defer></script>
+</body>
+</html>
